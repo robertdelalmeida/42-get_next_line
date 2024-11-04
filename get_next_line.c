@@ -23,20 +23,21 @@ char	*get_next_line(int fd)
 	char			*buffer;
 	char			*line;
 	char			*temp;
-	size_t			bytes_read = 0;
+	size_t			bytes_read;
 
 	if (fd < 0 || (fd > 0 && fd < 3))
 		return (NULL);
 	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
-    if (!all_read)
+	if (!all_read)
 	{
-    	all_read = ft_strdup("");
+		all_read = ft_strdup("");
 		if (!all_read)
 			return (NULL);
 	}
-
+	// ft_buffer();
+	bytes_read = 0;
 	while (!ft_strchr(all_read, '\n'))
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
@@ -57,11 +58,11 @@ char	*get_next_line(int fd)
 	temp = ft_strdup(all_read + ft_strlen(line));
 	free(all_read);
 	all_read = temp;
-	printf("all: %c%c%c\n", all_read[0], all_read[1], all_read[2]);
-	printf("len: %d\n", ft_strlen(line));
 	free(buffer);
 	return (line);
 }
+	// printf("all: %c%c%c\n", all_read[0], all_read[1], all_read[2]);
+	// printf("len: %d\n", ft_strlen(line));
 
 char	*ft_strcopy(char *all_read)
 {
@@ -83,26 +84,26 @@ char	*ft_strcopy(char *all_read)
 	return (line);
 }
 
-int main()
-{
-	char *line;
-	int fd;
-	int i = 1;
+// int main()
+// {
+// 	char *line;
+// 	int fd;
+// 	int i = 1;
 
-	line = NULL;
-	fd = open("text.txt", O_RDONLY);
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("chamada %d '%s'\n", i, line);
-		i++;
-	}
-	printf("chamada final %d '%s'\n", i, line);
+// 	line = NULL;
+// 	fd = open("text.txt", O_RDONLY);
+// 	while ((line = get_next_line(fd)) != NULL)
+// 	{
+// 		printf("chamada %d '%s'\n", i, line);
+// 		i++;
+// 	}
+// 	printf("chamada final %d '%s'\n", i, line);
 
-	fd = open("text copy.txt", O_RDONLY);
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("chamada %d '%s'\n", i, line);
-		i++;
-	}
-	printf("chamada final %d '%s'\n", i, line);
-}
+// 	fd = open("text copy.txt", O_RDONLY);
+// 	while ((line = get_next_line(fd)) != NULL)
+// 	{
+// 		printf("chamada %d '%s'\n", i, line);
+// 		i++;
+// 	}
+// 	printf("chamada final %d '%s'\n", i, line);
+// }
