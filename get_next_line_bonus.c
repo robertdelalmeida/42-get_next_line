@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/06 16:16:36 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:25:58 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,44 +90,65 @@ char	*ft_getline(char *all_read)
 // int main()
 // {
 // 	char *line;
-// 	int fd;
+// 	int fd1;
+// 	int fd2;
 // 	int i = 1;
-// 	// BUFFER_SIZE = 2147483645;
+// 	int j = 1;
 // 	printf("BUFFER_SIZE:%d\n", BUFFER_SIZE);
 
 // 	printf("\nFIRST TEST\n");
-// 	fd = open("text copy.txt", O_RDONLY);
-// 	while ((line = get_next_line(fd)) != NULL && i < 30)
+// 	fd1 = open("text copy.txt", O_RDONLY);
+// 	while (i < 3)
+// 	{
+// 		line = get_next_line(fd1);
+// 		printf("call %d is:%s", i, line);
+// 		free(line);
+// 		i++;
+// 	}
+
+// 	printf("\nSECOND TEST\n");
+// 	fd2 = open("text jump line.txt", O_RDONLY);
+// 	while ((line = get_next_line(fd2)) != NULL && i < 4)
+// 	{
+// 		line = get_next_line(fd2);
+// 		if (ft_strchr(line, '\n') == 0)
+// 			printf("call %d is:%s\n", j, line);
+// 		else
+// 			printf("call %d is:%s", j, line);
+// 		free(line);
+// 		j++;
+// 	}
+// 	printf("final call %d is:%s\n", j, line);
+
+// 	printf("\nFIRST TEST AGAIN\n");
+// 	while ((line = get_next_line(fd1)) != NULL)
 // 	{
 // 		printf("call %d is:%s", i, line);
 // 		free(line);
 // 		i++;
 // 	}
 // 	printf("\nfinal call %d is:%s\n", i, line);
-// 	close (fd);
+// 	close(fd1);
 
-// 	printf("\nSECOND TEST (with empty lines)\n");
-// 	i = 1;
-// 	fd = open("text jump line.txt", O_RDONLY);
-// 	while ((line = get_next_line(fd)) != NULL && i < 30)
+// 	printf("\nSECOND TEST AGAIN\n");
+// 	while ((line = get_next_line(fd2)) != NULL)
 // 	{
 // 		if (ft_strchr(line, '\n') == 0)
-// 			printf("call %d is:%s\n", i, line);
+// 			printf("call %d is:%s\n", j, line);
 // 		else
-// 			printf("call %d is:%s", i, line);
+// 			printf("call %d is:%s", j, line);
 // 		free(line);
-// 		i++;
+// 		j++;
 // 	}
-// 	printf("final call %d is:%s\n", i, line);
-// 	close(fd);
+// 	printf("final call %d is:%s\n", j, line);
+// 	close(fd2);
 
 // 	printf("\nTHIRD TEST\n");
-// 	fd = -1;
-// 	printf("negative fd:%s\n", get_next_line(fd));
+// 	fd1 = -1;
+// 	printf("negative fd:%s\n", get_next_line(fd1));
 
 // 	printf("\nFOURTH TEST\n");
-// 	fd = open("text copy.txt", O_RDONLY);
-// 	close(fd);
-// 	line = get_next_line(fd);
-// 	printf("close fd:%s\n", get_next_line(fd));
+// 	fd1 = open("text copy.txt", O_RDONLY);
+// 	close(fd1);
+// 	printf("close fd:%s\n", get_next_line(fd1));
 // }
