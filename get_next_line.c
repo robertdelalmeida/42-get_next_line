@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/05 21:08:59 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/05 23:06:39 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*get_next_line(int fd)
 	all_read = ft_get_buffer(fd, all_read, buffer);
 	if (all_read == NULL)
 		return (NULL);
-	printf("passei");
 	line = ft_strcopy(all_read);
 	temp = ft_strdup(all_read + ft_strlen(line));
 	free(all_read);
@@ -41,7 +40,7 @@ char	*get_next_line(int fd)
 
 char	*ft_get_buffer(int fd, char *all_read, char *buffer)
 {
-	size_t	bytes_read;
+	int		bytes_read;
 	char	*temp;
 
 	bytes_read = 1;
@@ -75,12 +74,9 @@ char	*ft_strcopy(char *all_read)
 	line = ft_calloc((new_line_pos + 2), 1);
 	if (!line)
 		return (NULL);
-	i = 0;
-	while (all_read[i] != '\0' && all_read[i] != '\n')
-	{
+	i = -1;
+	while (++i, all_read[i] != '\0' && all_read[i] != '\n')
 		line[i] = all_read[i];
-		i++;
-	}
 	if (all_read[i] == '\n')
 	{
 		line[i] = '\n';
@@ -90,7 +86,7 @@ char	*ft_strcopy(char *all_read)
 		line[i] = '\0';
 	return (line);
 }
-
+/*
 int main()
 {
 	char *line;
@@ -98,15 +94,16 @@ int main()
 	int i = 1;
 
 	line = NULL;
-	fd = open("text.txt", O_RDONLY);
+	fd = open("text copy.txt", O_RDONLY);
 	// line = get_next_line(fd);
 	// printf("%s\n", line);
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("chamada %d é:%s\n", i, line);
-		i++;
-	}
-	printf("chamada final %d é:%s\n", i, line);
+	// while ((line = get_next_line(fd)) != NULL)
+	// {
+	// 	printf("chamada %d é:%s\n", i, line);
+	// 	free(line);
+	// 	i++;
+	// }
+	// printf("chamada final %d é:%s\n", i, line);
 	// fd = open("text copy.txt", O_RDONLY);
 	// while ((line = get_next_line(fd)) != NULL)
 	// {
@@ -116,4 +113,8 @@ int main()
 	// printf("chamada final %d é:%s\n", i, line);
 	// fd = -1;
 	// printf("%s\n", get_next_line(fd));
+
+	close(fd);
+	line = get_next_line(fd);
 }
+*/
