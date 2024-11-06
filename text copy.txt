@@ -1,3 +1,12 @@
-copiei a copia da primeira linha!
-copiei a copia da segunda linha!
-copiei a copia da terceira linha!
+copied the copy of the first line!
+copied the copy of the second line!
+copied the copy of the third line!
+copied the copy of the fourth line!
+copied the copy of the fifth line!
+copied the copy of the sixth line!
+copied the copy of the seventh line!
+copied the copy of the eighth line!
+copied the copy of the ninth line!
+copied the copy of the tenth line!
+copied the copy of the eleventh line!
+copied the copy of the twelfth line!
