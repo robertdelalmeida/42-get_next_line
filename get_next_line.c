@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/05 20:30:34 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/05 21:08:59 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*get_next_line(int fd)
 	all_read = ft_get_buffer(fd, all_read, buffer);
 	if (all_read == NULL)
 		return (NULL);
+	printf("passei");
 	line = ft_strcopy(all_read);
 	temp = ft_strdup(all_read + ft_strlen(line));
 	free(all_read);
@@ -90,29 +91,29 @@ char	*ft_strcopy(char *all_read)
 	return (line);
 }
 
-// int main()
-// {
-// 	char *line;
-// 	int fd;
-// 	int i = 1;
+int main()
+{
+	char *line;
+	int fd;
+	int i = 1;
 
-// 	line = NULL;
-// 	fd = open("text copy.txt", O_RDONLY);
-// 	// line = get_next_line(fd);
-// 	// printf("%s\n", line);
-// 	while ((line = get_next_line(fd)) != NULL)
-// 	{
-// 		printf("chamada %d é:%s\n", i, line);
-// 		i++;
-// 	}
-// 	printf("chamada final %d é:%s\n", i, line);
-// 	// fd = open("text copy.txt", O_RDONLY);
-// 	// while ((line = get_next_line(fd)) != NULL)
-// 	// {
-// 	// 	printf("chamada %d é:%s\n", i, line);
-// 	// 	i++;
-// 	// }
-// 	// printf("chamada final %d é:%s\n", i, line);
-// 	// fd = -1;
-// 	// printf("%s\n", get_next_line(fd));
-// }
+	line = NULL;
+	fd = open("text.txt", O_RDONLY);
+	// line = get_next_line(fd);
+	// printf("%s\n", line);
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("chamada %d é:%s\n", i, line);
+		i++;
+	}
+	printf("chamada final %d é:%s\n", i, line);
+	// fd = open("text copy.txt", O_RDONLY);
+	// while ((line = get_next_line(fd)) != NULL)
+	// {
+	// 	printf("chamada %d é:%s\n", i, line);
+	// 	i++;
+	// }
+	// printf("chamada final %d é:%s\n", i, line);
+	// fd = -1;
+	// printf("%s\n", get_next_line(fd));
+}
