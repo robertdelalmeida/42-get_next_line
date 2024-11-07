@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 13:59:52 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:20:56 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,11 @@ char	*ft_getline(char *all_read)
 // {
 // 	// char *line;
 // 	// int fd;
-// 	// int i = 1;
+// 	// // int i = 1;
 // 	// printf("BUFFER_SIZE:%d\n", BUFFER_SIZE);
 // 	// // echo -n "message" > input.txt
-// 	// printf("stdin: %s\n", get_next_line(0));
-// 	// printf("stdin: %s\n", get_next_line(0));
+// 	// printf("stdin: %s\n", get_next_line(fd));
+// 	// printf("stdin: %s\n", get_next_line(fd));
 // 	// printf("\nFIRST TEST\n");
 // 	// fd = open(".txt", O_RDONLY);
 // 	// while ((line = get_next_line(fd)) != NULL)

@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 14:00:43 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:16:32 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,7 @@ char	*ft_getline(char *all_read)
 // 	printf("final call %d is:%s\n", j, line);
 // 	close(fd2);
 // 	printf("\nTHIRD TEST\n");
-// 	printf("negative fd:%s\n", get_next_line(-1));
+// 	printf("negative fd:%s\n", get_next_line(fd1));
 // 	printf("\nFOURTH TEST\n");
 // 	fd1 = open("text copy.txt", O_RDONLY);
 // 	close(fd1);
