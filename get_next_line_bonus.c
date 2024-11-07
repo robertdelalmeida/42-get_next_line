@@ -6,7 +6,7 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:41:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/06 18:25:58 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:00:43 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ char	*ft_getline(char *all_read)
 // 	int i = 1;
 // 	int j = 1;
 // 	printf("BUFFER_SIZE:%d\n", BUFFER_SIZE);
-
 // 	printf("\nFIRST TEST\n");
 // 	fd1 = open("text copy.txt", O_RDONLY);
 // 	while (i < 3)
@@ -105,7 +104,6 @@ char	*ft_getline(char *all_read)
 // 		free(line);
 // 		i++;
 // 	}
-
 // 	printf("\nSECOND TEST\n");
 // 	fd2 = open("text jump line.txt", O_RDONLY);
 // 	while ((line = get_next_line(fd2)) != NULL && i < 4)
@@ -119,7 +117,6 @@ char	*ft_getline(char *all_read)
 // 		j++;
 // 	}
 // 	printf("final call %d is:%s\n", j, line);
-
 // 	printf("\nFIRST TEST AGAIN\n");
 // 	while ((line = get_next_line(fd1)) != NULL)
 // 	{
@@ -129,7 +126,6 @@ char	*ft_getline(char *all_read)
 // 	}
 // 	printf("\nfinal call %d is:%s\n", i, line);
 // 	close(fd1);
-
 // 	printf("\nSECOND TEST AGAIN\n");
 // 	while ((line = get_next_line(fd2)) != NULL)
 // 	{
@@ -142,11 +138,8 @@ char	*ft_getline(char *all_read)
 // 	}
 // 	printf("final call %d is:%s\n", j, line);
 // 	close(fd2);
-
 // 	printf("\nTHIRD TEST\n");
-// 	fd1 = -1;
-// 	printf("negative fd:%s\n", get_next_line(fd1));
-
+// 	printf("negative fd:%s\n", get_next_line(-1));
 // 	printf("\nFOURTH TEST\n");
 // 	fd1 = open("text copy.txt", O_RDONLY);
 // 	close(fd1);

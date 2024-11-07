@@ -6,13 +6,14 @@
 /*   By: rdel-fra <rdel-fra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:42:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/06 18:41:36 by rdel-fra         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:24:05 by rdel-fra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
+# include <unistd.h>
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
